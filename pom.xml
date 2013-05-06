@@ -17,16 +17,16 @@
     </description>
     <url>http://github.com/taskadapter/redmine-java-api</url>
     <scm>
-        <connection>scm:git:git://github.com/taskadapter/redmine-java-api.git</connection>
+        <connection>scm:git:git://github.com/Terradue/redmine-java-api.git</connection>
         <!-- "developerConnection" is required for Maven Release plugin. -->
-        <developerConnection>scm:git:git@github.com:taskadapter/redmine-java-api.git</developerConnection>
+        <developerConnection>scm:git:git@github.com:Terradue/redmine-java-api.git</developerConnection>
         <tag>HEAD</tag>
         <!-- A publicly browsable repository. For example, via ViewCVS -->
-        <url>http://github.com/taskadapter/redmine-java-api/tree/master/</url>
+        <url>http://github.com/Terradue/redmine-java-api/tree/master/</url>
     </scm>
     <issueManagement>
         <system>github</system>
-        <url>http://github.com/taskadapter/redmine-java-api/issues</url>
+        <url>http://github.com/Terradue/redmine-java-api/issues</url>
     </issueManagement>
 
     <licenses>
