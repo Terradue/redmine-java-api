@@ -9,7 +9,7 @@
 
     <groupId>com.taskadapter</groupId>
     <artifactId>redmine-java-api</artifactId>
-    <version>1.21-SNAPSHOT</version>
+    <version>1.21-T2-SNAPSHOT</version>
 
     <description>Free open-source Java API for Redmine and Chiliproject bug/task management systems.
         This project was originally a part of Task Adapter application (http://www.taskadapter.com)
@@ -154,18 +154,9 @@
         </profile>
     </profiles>
 
-    <distributionManagement>
-        <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Sonatype Nexus Release Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-            <uniqueVersion>false</uniqueVersion>
-        </repository>
-        <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshot Repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-            <uniqueVersion>false</uniqueVersion>
-        </snapshotRepository>
-    </distributionManagement>
+    <parent>
+    	<groupId>com.terradue</groupId>
+    	<artifactId>t2-parent</artifactId>
+    	<version>8</version>
+    </parent>
 </project>

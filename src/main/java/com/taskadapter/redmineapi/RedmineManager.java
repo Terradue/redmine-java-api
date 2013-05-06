@@ -54,6 +54,7 @@ import com.taskadapter.redmineapi.bean.Tracker;
 import com.taskadapter.redmineapi.bean.User;
 import com.taskadapter.redmineapi.bean.Version;
 import com.taskadapter.redmineapi.bean.Watcher;
+import com.taskadapter.redmineapi.bean.Wiki;
 import com.taskadapter.redmineapi.internal.Transport;
 import com.taskadapter.redmineapi.internal.URIConfigurator;
 import com.taskadapter.redmineapi.internal.io.MarkedIOException;
@@ -917,5 +918,13 @@ public class RedmineManager {
 
     public void deleteWatcherFromIssue(Watcher watcher, Issue issue) throws RedmineException {
         transport.deleteChildId(Issue.class, Integer.toString(issue.getId()), watcher, watcher.getId() );
+    }
+    
+    public Wiki createWiki(Wiki wiki) throws RedmineException {
+        if ( wiki.getProject() == null || wiki.getProject().getIdentifier() == null )
+        {
+            throw new IllegalArgumentException( "Wiki must contain an existing project" );
+        }
+        return transport.addWikiToProject( wiki );
     }
 }
