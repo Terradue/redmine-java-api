@@ -8,3 +8,5 @@ target
 /.settings
 /META-INF
 /build.properties
+/pom.xml.releaseBackup
+/release.properties
