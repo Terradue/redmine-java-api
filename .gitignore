@@ -1,6 +1,8 @@
-target
 *.iml
+.gradle
 .idea
+build
+target
 
 /.settings/**
 /.classpath
