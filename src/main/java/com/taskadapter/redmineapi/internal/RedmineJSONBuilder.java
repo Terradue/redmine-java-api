@@ -413,7 +413,7 @@ public class RedmineJSONBuilder {
     {
         if ( wikiPage == null )
             return;
-        JsonOutput.addIfNotNull(writer, "title", wikiPage.getTitle());
+        JsonOutput.addIfNotNull(writer, "title", wikiPage.getTitle().replace( ' ', '_' ));
     }
 
 	/**

@@ -586,6 +586,19 @@ public class RedmineManager {
 		transport
 				.deleteObject(Version.class, Integer.toString(version.getId()));
     }
+    
+    /**
+     * deletes a new {@link Attachment} from the {@link Project} contained. <br/>
+     *
+     * @param version the {@link Version}.
+     * @throws RedmineAuthenticationException thrown in case something went wrong while trying to login
+     * @throws RedmineException        thrown in case something went wrong in Redmine
+     * @throws NotFoundException       thrown in case an object can not be found
+     */
+    public void deleteAttachment(Attachment attachment) throws RedmineException {
+        transport
+                .deleteObject(Attachment.class, Integer.toString(attachment.getId()));
+    }
 
     /**
      * delivers a list of {@link Version}s of a {@link Project}
